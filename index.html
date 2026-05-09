@@ -1,4 +1,24 @@
+<<<<<<< HEAD
 ﻿<!doctype html>
+=======
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url=home.html">
+  <meta name="google-site-verification" content="cE8qHi9GZziyMF6VsSJ6dYxR_DtshT9TcKUsFlGMZYU" />
+  <meta name="yandex-verification" content="fe3418f540569a63" />
+  <link rel="canonical" href="https://pokerdom1.vercel.app/">
+  <title>PokerDom</title>
+</head>
+<body>
+  <a href="home.html">Перейти на главную</a>
+</body>
+</html>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=home.html"><link rel="canonical" href="https://pokerdom1.vercel.app/"><title>PokerDom</title></head><body><a href="home.html">Перейти на главную</a></body></html>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>PokerDom</title></head><body><h1>PokerDom</h1></body></html>
+<!doctype html>
+>>>>>>> c6ec3e41e7356179277074cb588a2a8d308877f6
 <html lang="ru">
 <head>
   <meta charset="utf-8">
@@ -579,3 +599,335 @@
 </body>
 </html>
 
+<<<<<<< HEAD
+=======
+    <!-- Главный баннер с анимацией долларов -->
+    <section class="hero">
+        <div class="poker-background" id="pokerBackground"></div>
+
+<style>
+.poker-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.falling-object {
+    position: absolute;
+    top: -50px;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    user-select: none;
+    z-index: 1;
+    animation: falling linear forwards;
+}
+
+@keyframes falling {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const pokerBg = document.getElementById('pokerBackground');
+    if (!pokerBg) return;
+    
+    // Массив символов с цветами
+    const symbols = [
+        { char: '$', color: '#FFD700' }, // Золотой доллар
+        { char: '♥', color: '#FF0000' }, // Красное черви
+        { char: '♦', color: '#FF3333' }, // Красные бубны
+        { char: '♠', color: '#000000' }, // Черные пики
+        { char: '♣', color: '#006400' }, // Темно-зеленые трефы
+        { char: '💰', color: '#FFD700' }, // Золотой мешок денег
+        { char: '💵', color: '#32CD32' }, // Зеленые доллары
+        { char: '💎', color: '#00BFFF' }, // Синий алмаз
+        { char: '👑', color: '#FFD700' }, // Золотая корона
+        { char: '🎰', color: '#FF4500' }, // Оранжевый автомат
+        { char: '●', color: '#FF0000' }, // Красная фишка
+        { char: '●', color: '#0000FF' }, // Синяя фишка
+        { char: '●', color: '#00FF00' }, // Зеленая фишка
+        { char: '★', color: '#FFFF00' }, // Желтая звезда
+        { char: '🃏', color: '#9370DB' }, // Фиолетовый джокер
+    ];
+    
+    function createFallingObject() {
+        const symbol = symbols[Math.floor(Math.random() * symbols.length)];
+        
+        const obj = document.createElement('div');
+        obj.classList.add('falling-object');
+        obj.textContent = symbol.char;
+        obj.style.color = symbol.color;
+        obj.style.left = Math.random() * 100 + 'vw';
+        obj.style.fontSize = (Math.random() * 20 + 20) + 'px';
+        obj.style.opacity = Math.random() * 0.7 + 0.3;
+        
+        // Разная скорость падения
+        const duration = Math.random() * 4 + 3;
+        obj.style.animationDuration = duration + 's';
+        obj.style.animationDelay = Math.random() * 2 + 's';
+        
+        pokerBg.appendChild(obj);
+        
+        // Удаление
+        setTimeout(() => {
+            if (obj.parentNode === pokerBg) {
+                pokerBg.removeChild(obj);
+            }
+        }, (duration + 3) * 1000);
+    }
+    
+    // Создаем 20 объектов сразу
+    for (let i = 0; i < 20; i++) {
+        setTimeout(createFallingObject, i * 200);
+    }
+    
+    // Создаем новые каждые 300мс
+    setInterval(createFallingObject, 300);
+});
+</script>       
+       
+        <div class="container">
+            <div class="hero-content">
+                <h1>PokerDom - Лучший покер-рум и казино 2023</h1>
+                <p>Присоединяйтесь к тысячам игроков по всей России! Получите эксклюзивный бонус до 200% на первый депозит и испытайте удачу в покере, слотах и других азартных играх. Играйте бесплатно в демо-режиме или на реальные деньги с гарантией безопасности и честности каждого раунда.</p>
+                
+                <div class="hero-buttons">
+                    <a href="https://pdmlinktwo.xyz/click/6979c7c96bcc6364c87500be/4757/16899/subaccount" class="btn btn-large">Получить бонус 200%</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Слайдер -->
+    <section class="slider-section">
+        <div class="container">
+            <div class="slider" id="imageSlider">
+                <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/backgr.jpg');">
+                    <div class="slide-content">
+                        <h2>Покер высшего уровня</h2>
+                        <p>Играйте в покер с живыми дилерами и реальными соперниками. Турниры с гарантированными призами, кеш-игры и многое другое. Texas Hold'em, Omaha и другие популярные форматы.</p>
+                        <a href="https://pdmlinktwo.xyz/click/6979c7c96bcc6364c87500be/4757/16899/subaccount" class="btn btn-secondary">Играть на деньги</a>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/backgr3.jpg');">
+                    <div class="slide-content">
+                        <h2>Сотни слотов</h2>
+                        <p>Более 1000 игровых автоматов от ведущих провайдеров. Джекпоты, бонусные игры и высокие коэффициенты выплат. Новые слоты добавляются еженедельно!</p>
+                        <a href="https://pdmlinktwo.xyz/click/6979c7c96bcc6364c87500be/4757/16899/subaccount" class="btn btn-secondary">Играть на деньги</a>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/backgr2.jpg');">
+                    <div class="slide-content">
+                        <h2>Бонусы и акции</h2>
+                        <p>Регулярные акции, турниры с призовыми фондами, кэшбэк и специальные предложения для постоянных игроков. Увеличьте свой банкролл с помощью наших бонусов!</p>
+                        <a href="https://pdmlinktwo.xyz/click/6979c7c96bcc6364c87500be/4757/16899/subaccount" class="btn btn-secondary">Играть на деньги</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-nav" id="sliderNav">
+                <div class="slider-dot active" data-slide="0"></div>
+                <div class="slider-dot" data-slide="1"></div>
+                <div class="slider-dot" data-slide="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как играть? -->
+    <section class="how-to-play">
+        <div class="container">
+            <div class="section-title">
+                <h2>Как играть в PokerDom?</h2>
+                <p>Простая инструкция для новичков и опытных игроков</p>
+            </div>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-icon">①</div>
+                    <h3>Регистрация</h3>
+                    <p>Создайте аккаунт на официальном сайте PokerDom. Заполните основные данные и подтвердите свою личность для безопасности. Процесс регистрации занимает не более 2-3 минут.</p>
+                    <p>После регистрации вам будет доступен демо-режим для ознакомления с играми без риска потери средств. Вы сможете протестировать все функции платформы.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">②</div>
+                    <h3>Получение бонуса</h3>
+                    <p>Активируйте приветственный бонус до 200% на первый депозит. Для этого внесите средства на счет после регистрации. Минимальная сумма депозита для получения бонуса - 500 рублей.</p>
+                    <p>Бонусные средства можно использовать в большинстве игр покер-рума, соблюдая условия отыгрыша. Вейджер для бонуса составляет х35.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">③</div>
+                    <h3>Выбор игры</h3>
+                    <p>PokerDom предлагает различные форматы покера (Texas Hold'em, Omaha), слоты, рулетку и другие азартные игры. Ежедневно проводятся турниры с гарантированными призовыми фондами.</p>
+                    <p>Начните с демо-версий, чтобы ознакомиться с правилами, затем переходите к игре на реальные деньги. Для новичков доступны обучающие материалы и стратегии.</p>
+                </div>
+            </div>
+            
+            <!-- Дополнительный текст для SEO -->
+            <div class="content-block">
+                <h3>Почему выбирают PokerDom?</h3>
+                <p>PokerDom зарекомендовал себя как один из самых надежных покер-румов на российском рынке. Платформа работает с 2014 года и за это время собрала многотысячную аудиторию довольных игроков. Основные преимущества PokerDom включают:</p>
+                
+                <ul>
+                    <li><strong>Лицензированная деятельность</strong> - PokerDom работает под международной лицензией, что гарантирует честность игры и защиту прав игроков.</li>
+                    <li><strong>Широкий выбор игровых форматов</strong> - Турниры, кеш-игры, слоты, рулетка, блэкджек и другие популярные азартные игры.</li>
+                    <li><strong>Регулярные акции и бонусы</strong> - Для новых и постоянных игроков доступны различные бонусные программы, кэшбэк, фрироллы и специальные предложения.</li>
+                    <li><strong>Удобные способы пополнения счета и вывода средств</strong> - Более 20 методов оплаты, включая банковские карты, электронные кошельки и криптовалюты.</li>
+                    <li><strong>Круглосуточная поддержка на русском языке</strong> - Техническая поддержка доступна 24/7 через онлайн-чат, email и телефон.</li>
+                    <li><strong>Адаптированное мобильное приложение</strong> - Играйте на смартфонах и планшетах с помощью удобного мобильного приложения для iOS и Android.</li>
+                    <li><strong>Высокий уровень безопасности</strong> - Защита данных и финансовых операций с использованием современных методов шифрования и двухфакторной аутентификации.</li>
+                </ul>
+                
+                <p>Покер-рум PokerDom использует сертифицированный генератор случайных чисел (ГСЧ), что гарантирует честность каждой раздачи. Все финансовые операции защищены 128-битным SSL-шифрованием. Игроки из России могут беспрепятственно пользоваться всеми функциями платформы, включая участие в международных турнирах с крупными призовыми фондами.</p>
+                
+                <p>Для новичков на платформе предусмотрена подробная обучающая база, включающая видеоуроки, статьи по стратегиям игры и демо-режим для оттачивания навыков без риска потери средств. Опытные игроки оценят разнообразие лимитов, регулярные турниры с гарантированными призами и программу лояльности с кэшбэком до 40%.</p>
+                
+                <h4>Технические характеристики платформы</h4>
+                <p>Платформа PokerDom разработана с использованием современных технологий, что обеспечивает стабильную работу даже при высоких нагрузках. Интерфейс интуитивно понятен и доступен на русском языке. Игровой клиент имеет минимальные системные требования и работает на большинстве компьютеров и мобильных устройств.</p>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Характеристика</th>
+                                <th>Значение</th>
+                                <th>Описание</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Минимальные системные требования</td>
+                                <td>Windows 7 / macOS 10.10</td>
+                                <td>Процессор 1 ГГц, 1 ГБ ОЗУ, 100 МБ свободного места</td>
+                            </tr>
+                            <tr>
+                                <td>Поддерживаемые браузеры</td>
+                                <td>Chrome, Firefox, Safari, Edge</td>
+                                <td>Последние версии с поддержкой HTML5</td>
+                            </tr>
+                            <tr>
+                                <td>Мобильные приложения</td>
+                                <td>iOS 11+, Android 5.0+</td>
+                                <td>Бесплатное скачивание с официального сайта</td>
+                            </tr>
+                            <tr>
+                                <td>Языки интерфейса</td>
+                                <td>Русский, английский</td>
+                                <td>Полная локализация платформы</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ на главной -->
+    <section class="faq-preview">
+        <div class="container">
+            <div class="section-title">
+                <h2>Частые вопросы (FAQ)</h2>
+                <p>Ответы на самые популярные вопросы об игре в PokerDom</p>
+            </div>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Можно ли играть бесплатно?</h3>
+                    <p>Да, PokerDom предоставляет возможность игры в демо-режиме без регистрации и депозита. Вы можете ознакомиться с правилами покера, потренироваться в различных форматах игры и опробовать игровые автоматы без риска потери средств.</p>
+                    <p>Демо-версии используют виртуальные кредиты, которые не имеют реальной стоимости и не могут быть обналичены. Этот режим идеально подходит для новичков, желающих изучить основы игры перед переходом на реальные ставки.</p>
+                    <a href="faq.html">Подробнее о бесплатной игре →</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Что дает бонус?</h3>
+                    <p>Приветственный бонус до 200% увеличивает ваш первый депозит, давая больше средств для игры. Например, при внесении 1000 рублей вы получите дополнительно до 2000 рублей бонусных средств.</p>
+                    <p>Бонусные средства имеют условия отыгрыша (вейджер), которые необходимо выполнить перед выводом выигрышей. Обычно вейджер составляет х35-х50 от суммы бонуса, в зависимости от типа игры.</p>
+                    <a href="faq.html">Подробнее о бонусах →</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Безопасна ли игра?</h3>
+                    <p>PokerDom обеспечивает высокий уровень безопасности благодаря использованию 128-битного SSL-шифрования, двухфакторной аутентификации и строгой верификации аккаунтов. Платформа работает под международной лицензией.</p>
+                    <p>Все финансовые операции защищены по стандартам PCI DSS, а честность игры гарантируется сертифицированным генератором случайных чисел и регулярными аудитами независимых организаций.</p>
+                    <a href="security.html">Подробнее о безопасности →</a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="faq.html" class="btn">Все вопросы и ответы</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="/images/Logo.jpeg" alt="Логотип PokerDom" class="footer-logo-img">
+                        <span></span>
+                    </div>
+                    <p>PokerDom - ведущий покер-рум и онлайн-казино для игроков из России. Лицензированная платформа с гарантией честности и безопасности.</p>
+                    <p>Играйте ответственно. Только для лиц старше 18 лет.</p>
+                    
+                    <div class="social-links">
+                        <a href="https://pdmlinktwo.xyz/click/6979c7c96bcc6364c87500be/4757/16899/subaccount" class="social-link" aria-label="Telegram"><i>TG</i></a>
+                        <a href="https://pdmlinktwo.xyz/click/6979c7c96bcc6364c87500be/4757/16899/subaccount" class="social-link" aria-label="VK"><i>VK</i></a>
+                        <a href="https://pdmlinktwo.xyz/click/6979c7c96bcc6364c87500be/4757/16899/subaccount" class="social-link" aria-label="YouTube"><i>YT</i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Страницы</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="promotions.html">Акции и бонусы</a></li>
+                        <li><a href="about.html">Об игре</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="security.html">Безопасность</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Игры</h4>
+                    <ul>
+                        <li><a href="#">Покер</a></li>
+                        <li><a href="#">Слоты</a></li>
+                        <li><a href="#">Рулетка</a></li>
+                        <li><a href="#">Блэкджек</a></li>
+                        <li><a href="#">Турниры</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p>Поддержка работает 24/7</p>
+                    <p>Email: support@pokerdom.com</p>
+                    <p>Чат: доступен в личном кабинете</p>
+                    <a href="https://pdmlinktwo.xyz/click/6979c7c96bcc6364c87500be/4757/16899/subaccount" class="btn" style="margin-top: 15px;">Начать игру</a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 PokerDom. Все права защищены. Используя сайт, вы подтверждаете свое совершеннолетие и соглашаетесь с <a href="#">Пользовательским соглашением</a> и <a href="#">Политикой конфиденциальности</a>.</p>
+                <p style="margin-top: 10px;">Представленная информация носит ознакомительный характер. Азартные игры могут вызывать зависимость. Играйте ответственно.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+>>>>>>> c6ec3e41e7356179277074cb588a2a8d308877f6
