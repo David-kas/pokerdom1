@@ -38,8 +38,15 @@ img { max-width: 100%; height: auto; }
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .header-inner { display: flex; gap: 18px; align-items: center; justify-content: space-between; min-height: 74px; }
-.logo { font-weight: 800; letter-spacing: 0.03em; color: #fff; font-size: 1.08rem; }
+.logo { font-weight: 800; letter-spacing: 0.03em; color: #fff; font-size: 1.08rem; display: inline-flex; align-items: center; }
 .logo b { color: var(--accent); }
+.logo-img {
+  height: 38px;
+  width: auto;
+  max-width: 170px;
+  object-fit: contain;
+  display: block;
+}
 .nav-toggle {
   display: none; border: 1px solid rgba(255,255,255,.18); border-radius: 10px;
   background: transparent; color: #fff; padding: 8px 10px;
@@ -51,7 +58,8 @@ img { max-width: 100%; height: auto; }
 .hero {
   padding: 66px 0;
   background:
-    linear-gradient(180deg, rgba(11,14,34,.3) 0%, rgba(11,14,34,.85) 100%),
+    linear-gradient(180deg, rgba(11,14,34,.55) 0%, rgba(11,14,34,.9) 100%),
+    url("../images/backgr.jpg") center/cover no-repeat,
     radial-gradient(circle at 80% 20%, rgba(143,107,255,.35), transparent 35%);
 }
 .hero-grid { display: grid; gap: 24px; grid-template-columns: 1.4fr 1fr; align-items: center; }
@@ -168,13 +176,23 @@ main > .breadcrumbs:first-child { margin-top: 0; }
 }
 
 .massive-section {
-  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.04), rgba(9, 11, 27, 0.88)),
+    url("../images/backgr2.jpg") center/cover no-repeat;
   border: 1px solid rgba(255,255,255,.08);
   border-radius: 16px;
   padding: 20px;
 }
 
-.footer { margin-top: 36px; padding: 30px 0; border-top: 1px solid rgba(255,255,255,.1); background: #090d22; }
+.footer {
+  margin-top: 36px;
+  padding: 30px 0;
+  border-top: 1px solid rgba(255,255,255,.1);
+  background:
+    linear-gradient(180deg, rgba(9, 13, 34, 0.92), rgba(9, 11, 27, 0.98)),
+    url("../images/backgr3.jpg") center bottom/cover no-repeat;
+  background-color: #090d22;
+}
 .footer-cols { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 18px; }
 .footer ul { list-style: none; }
 .footer li { margin: 6px 0; }
